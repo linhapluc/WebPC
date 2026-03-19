@@ -1,0 +1,601 @@
+:root {
+    --admin-accent: #0f766e;             /* xanh kiểu TikTokShop */
+    --admin-accent-soft: #e0f2f1;
+    --admin-border: #e5e7eb;
+    --admin-text-main: #111827;
+    --admin-text-muted: #6b7280;
+    --admin-card-bg: #ffffff;
+}
+
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f3f4f6;
+    color: var(--admin-text-main);
+}
+
+/* Layout tổng */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ========================= SIDEBAR ========================= */
+
+.admin-sidebar {
+    width: 220px;
+    background: #ffffff;
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+    z-index: 20;
+    border-right: 1px solid var(--admin-border);
+}
+
+.admin-sidebar-header {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--admin-border);
+    background: var(--admin-accent-soft);
+}
+
+.admin-sidebar-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--admin-accent);
+    color: #ecfeff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.admin-sidebar-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.admin-sidebar-nav {
+    flex: 1;
+    padding: 6px 0;
+    overflow-y: auto;
+}
+.admin-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.admin-sidebar-brand:hover {
+    opacity: 0.9;
+}
+
+
+.admin-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 18px;
+    text-decoration: none;
+    color: #111827;
+    font-size: 13px;
+    border-radius: 0;
+    transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+}
+
+.admin-nav-item i {
+    width: 18px;
+    text-align: center;
+    font-size: 15px;
+    color: var(--admin-accent);
+}
+
+.admin-nav-item span {
+    flex: 1;
+}
+
+.admin-nav-item:hover {
+    background: #f3f4f6;
+}
+
+.admin-nav-item.active {
+    background: var(--admin-accent-soft);
+    border-left: 4px solid var(--admin-accent);
+    padding-left: 14px; /* 18 - 4 border */
+    font-weight: 600;
+    color: var(--admin-accent);
+}
+
+.admin-nav-item.active i {
+    color: var(--admin-accent);
+}
+
+.admin-sidebar-divider {
+    border-top: 1px solid var(--admin-border);
+    margin: 6px 0;
+}
+
+.admin-sidebar-logout {
+    color: #b91c1c;
+}
+
+.admin-sidebar-logout i {
+    color: #b91c1c;
+}
+
+.admin-sidebar-footer {
+    padding: 10px 16px 16px;
+    font-size: 12px;
+    color: var(--admin-text-muted);
+    border-top: 1px solid var(--admin-border);
+}
+
+/* ========================= MAIN ========================= */
+
+.admin-main {
+    margin-left: 220px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* TOPBAR */
+.admin-topbar {
+    height: 64px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.admin-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-page-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.admin-topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+}
+
+/* CONTENT */
+.admin-content {
+    padding: 20px 24px 32px;
+}
+
+/* ========================= DASHBOARD CARDS ========================= */
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: var(--admin-card-bg);
+    border-radius: 14px;
+    border: 1px solid var(--admin-border);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-card-label {
+    font-size: 13px;
+    color: var(--admin-text-muted);
+}
+
+.stat-card-value {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.stat-card-meta {
+    font-size: 12px;
+    color: var(--admin-text-muted);
+}
+
+/* CARD PANEL CHUNG */
+
+.card-panel {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid var(--admin-border);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+}
+
+.card-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.card-panel-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Bảng “hiện đại” */
+
+.table-modern thead {
+    background: #f9fafb;
+}
+
+.table-modern th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #6b7280;
+}
+
+.table-modern td {
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+/* Badge mềm */
+
+.badge-soft {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.18);
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Chart container */
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+}
+
+#revenueChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ========================= EXTRA (cho các trang khác) ========================= */
+
+/* Product cell (sẽ dùng cho sanpham.php sau này) */
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #e5e7eb;
+}
+
+.product-name {
+    font-weight: 500;
+    color: #111827;
+}
+
+.product-meta {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Status pill */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #047857;
+}
+
+.status-inactive {
+    background: rgba(156, 163, 175, 0.18);
+    color: #374151;
+}
+
+.status-out {
+    background: rgba(239, 68, 68, 0.1);
+    color: #b91c1c;
+}
+
+/* Switch toggle (bật/tắt SP) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.switch input:checked + .slider {
+    background: #111827;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+/* Search ở header đơn hàng */
+.order-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tabs trạng thái đơn */
+.order-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--admin-border);
+    padding-bottom: 6px;
+}
+
+.order-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--admin-text-muted);
+    background: #f3f4f6;
+}
+
+.order-tab-count {
+    font-weight: 600;
+}
+
+.order-tab.active {
+    background: #111827;
+    color: #ffffff;
+}
+
+/* Thông tin người nhận */
+.order-recipient {
+    font-size: 13px;
+}
+
+.order-recipient-address {
+    color: var(--admin-text-muted);
+    font-size: 12px;
+}
+
+/* Pill trạng thái đơn hàng */
+.order-status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.order-status-pending-pay {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.order-status-processing {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.order-status-shipping {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.order-status-completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.order-status-canceled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.order-status-default {
+    background: #e5e7eb;
+    color: #374151;
+}
+/* Ô search đơn hàng */
+.order-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tabs trạng thái */
+.order-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--admin-border);
+    padding-bottom: 6px;
+}
+
+.order-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--admin-text-muted);
+    background: #f3f4f6;
+}
+
+.order-tab-count {
+    font-weight: 600;
+}
+
+.order-tab.active {
+    background: #111827;
+    color: #ffffff;
+}
+
+/* Người nhận */
+.order-recipient {
+    font-size: 13px;
+}
+.order-recipient-address {
+    font-size: 12px;
+    color: var(--admin-text-muted);
+}
+
+/* Sản phẩm trong đơn */
+.order-product {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.order-product-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #e5e7eb;
+    flex-shrink: 0;
+}
+
+.order-product-thumb.no-img {
+    border: 1px dashed #d1d5db;
+}
+
+.order-product-main {
+    font-size: 13px;
+}
+
+.order-product-info {
+    font-size: 12px;
+    color: var(--admin-text-muted);
+}
+
+/* Pill trạng thái */
+.order-status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.order-status-pending-pay {
+    background: #fef3c7;
+    color: #92400e;
+}
+.order-status-processing {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+.order-status-shipping {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+.order-status-completed {
+    background: #dcfce7;
+    color: #166534;
+}
+.order-status-canceled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+.order-status-default {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .admin-sidebar {
+        display: none;
+    }
+
+    .admin-main {
+        margin-left: 0;
+    }
+}
