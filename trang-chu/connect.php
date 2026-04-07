@@ -1,0 +1,21 @@
+<?php
+// Thông tin kết nối cho localhost (XAMPP)
+$host = 'localhost';
+$dbname = 'webpc';
+$user = 'root';
+$pass = ''; // Mật khẩu XAMPP thường là rỗng
+
+$charset = 'utf8mb4';
+$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+    $conn = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    die("Lỗi kết nối CSDL trên localhost: " . $e->getMessage());
+}
+?>

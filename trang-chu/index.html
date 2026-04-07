@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng PC</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- === TOP BAR === -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <ul class="top-bar-links">
+                <li><a href="#"><i class="fa-solid fa-gift"></i> Khuyến mãi</a></li>
+                <li><a href="#"><i class="fa-solid fa-credit-card"></i> Trả góp</a></li>
+                <li><a href="#"><i class="fa-solid fa-tag"></i> Bảng giá</a></li>
+                <li><a href="#"><i class="fa-solid fa-wrench"></i> Xây dựng cấu hình</a></li>
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Chính sách bảo hành</a></li>
+            </ul>
+            <div class="top-bar-hotline">
+                <a href="tel:19001155"><i class="fa-solid fa-phone-volume"></i> Hotline: <strong>1900 1155</strong></a>
+                 <span class="top-bar-notice">*Hoạt động bình thường từ 02/05</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- === HEADER CHÍNH === -->
+    <header class="site-header">
+        <div class="container header-content">
+            <!-- 1. Logo -->
+            <div class="logo">
+                <a href="#">STAR ★ Đơn Giản</a>
+            </div>
+            <!-- 2. Nút Toggle -->
+            <button class="category-toggle-btn" id="category-toggle" aria-label="Toggle Categories" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+                <span>Danh mục</span>
+            </button>
+            <!-- 3. Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit">Tìm</button>
+            </div>
+            <!-- 4. User Actions -->
+            <div class="user-actions">
+                <a href="#"><i class="fa-regular fa-user"></i> Tài khoản</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng (0)</a>
+            </div>
+        </div>
+    </header>
+  
+
+    <!-- === MAIN CONTENT === -->
+    <main>
+        <div class="container main-layout">
+            <!-- === SIDEBAR = -->
+            <aside class="category-sidebar" id="category-sidebar-content">
+                <h3 class="sidebar-title"> <i class="fa-solid fa-bars"></i> Danh mục sản phẩm</h3>
+                <ul class="category-list">
+                    <li><a href="#"><i class="fa-solid fa-network-wired fa-fw"></i> Lắp đặt phòng net</a></li>
+                    <li><a href="#"><i class="fa-solid fa-recycle fa-fw"></i> Linh Kiện Cũ</a></li>
+                    <li><a href="#"><i class="fa-solid fa-microchip fa-fw"></i> CPU, Mainboard, VGA</a></li>
+                    <li><a href="#"><i class="fa-solid fa-memory fa-fw"></i> RAM, SSD, HDD, Thẻ nhớ</a></li>
+                    <li><a href="#"><i class="fa-solid fa-computer fa-fw"></i> Case, Tản, Nguồn</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gamepad fa-fw"></i> PC Gaming - Đồ Họa - AI</a></li>
+                    <li><a href="#"><i class="fa-solid fa-briefcase fa-fw"></i> PC Văn Phòng - DN</a></li>
+                    <li><a href="#"><i class="fa-solid fa-laptop fa-fw"></i> Laptop</a></li>
+                    <li><a href="#"><i class="fa-solid fa-tv fa-fw"></i> Màn hình, Tivi</a></li>
+                    <li><a href="#"><i class="fa-solid fa-keyboard fa-fw"></i> Phím, Chuột, Tai Nghe</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chair fa-fw"></i> Bàn, Ghế Gaming</a></li>
+                    <li><a href="#"><i class="fa-solid fa-wifi fa-fw"></i> Thiết bị mạng</a></li>
+                    <li><a href="#"><i class="fa-solid fa-volume-high fa-fw"></i> Thiết bị âm thanh</a></li>
+                    <li><a href="#"><i class="fa-solid fa-camera fa-fw"></i> Camera, Webcam, Máy in</a></li>
+                    <li><a href="#"><i class="fa-solid fa-puzzle-piece fa-fw"></i> Phụ kiện & Phần mềm</a></li>
+                </ul>
+            </aside>
+           
+
+            
+            <div class="main-content-area"> 
+
+                <!-- KHU VỰC TABS 1: PHÍM/CHUỘT... -->
+                <section class="tabbed-products keyboard-mouse-section">
+                    <nav class="tab-nav">
+                        <ul role="tablist">
+                            <li role="presentation"><a href="#panel-keyboard" role="tab" aria-selected="true" class="tab-link active-tab" data-tab-target="#panel-keyboard">Bàn phím</a></li>
+                            <li role="presentation"><a href="#panel-mouse" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-mouse">Chuột</a></li>
+                            <li role="presentation"><a href="#panel-headphone" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-headphone">Tai nghe</a></li>
+                            <li role="presentation"><a href="#panel-desk" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-desk">Bàn</a></li>
+                            <li role="presentation"><a href="#panel-chair" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-chair">Ghế</a></li>
+                        </ul>
+                        <a href="#" class="view-all-link">Xem tất cả »</a>
+                    </nav>
+                    <div class="tab-content-container">
+                        <div id="panel-keyboard" role="tabpanel" class="tab-content-panel active-panel">
+                             <div class="product-grid">
+                                <div class="product-card"><span class="discount-badge">Giảm 23%</span><img src="https://via.placeholder.com/300x300?text=Akko+5075B" alt="Bàn phím Akko 5075B" class="product-image"><h3 class="product-name">Bàn phím cơ Akko 5075B Plus Horizon | Switch Crea...</h3><p class="product-price">1.150.000₫ <del>1.489.000₫</del></p><div class="product-tags">Không dây • Gaming • Layout 75% • Led RGB</div></div>
+                                <div class="product-card"><span class="discount-badge">Giảm 24%</span><img src="https://via.placeholder.com/300x300?text=Xinmeng+M71" alt="Bàn Phím Cơ Không Dây Xinmeng M71" class="product-image"><h3 class="product-name">Bàn Phím Cơ Không Dây Xinmeng M71RGB, White...</h3><p class="product-price">1.290.000₫ <del>1.690.000₫</del></p><div class="product-extra-info">Giảm 400,000 khi mua cùng Máy bộ Star Officeline <a href="#">Tại đây</a></div></div>
+                                <div class="product-card"><span class="discount-badge">Giảm 9%</span><img src="https://via.placeholder.com/300x300?text=DareU+EK75" alt="Bàn phím cơ Dare-U EK75 Pro WBC" class="product-image"><h3 class="product-name">Bàn phím cơ Dare-U EK75 Pro WBC | Wireless, triple...</h3><p class="product-price">990.000₫ <del>1.090.000₫</del></p><div class="product-tags">Không dây • Gaming • Layout 75% • Led RGB • Doubleshot</div></div>
+                             </div>
+                        </div>
+                        <div id="panel-mouse" role="tabpanel" class="tab-content-panel"><div class="product-grid"><div class="product-card"><img src="https://via.placeholder.com/300x300?text=Logitech+G304" alt="Chuột G304" class="product-image"><h3 class="product-name">Chuột Gaming Không Dây Logitech G304...</h3><p class="product-price">729.000₫</p></div><div class="product-card"><img src="https://via.placeholder.com/300x300?text=Logitech+G102" alt="Chuột G102" class="product-image"><h3 class="product-name">Chuột Logitech G102 Gen II Lightsync | Đen...</h3><p class="product-price">388.000₫</p></div><div class="product-card"><img src="https://via.placeholder.com/300x300?text=Razer+V3" alt="Chuột Razer" class="product-image"><h3 class="product-name">Chuột Razer DeathAdder V3-Ultra...</h3><p class="product-price">1.589.000₫</p></div></div></div>
+                        <div id="panel-headphone" role="tabpanel" class="tab-content-panel"><div class="product-grid"><p>Nội dung tai nghe...</p></div></div>
+                        <div id="panel-desk" role="tabpanel" class="tab-content-panel"><div class="product-grid"><p>Nội dung bàn...</p></div></div>
+                        <div id="panel-chair" role="tabpanel" class="tab-content-panel"><div class="product-grid"><p>Nội dung ghế...</p></div></div>
+                    </div>
+                </section>
+
+                
+                <section class="tabbed-products screen-section">
+                     <nav class="tab-nav">
+                        <ul role="tablist">
+                            <li role="presentation"><a href="#panel-mh-km" role="tab" aria-selected="true" class="tab-link active-tab" data-tab-target="#panel-mh-km">Màn hình khuyến mãi</a></li>
+                            <li role="presentation"><a href="#panel-mh-gaming" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-mh-gaming">Màn hình Gaming</a></li>
+                            <li role="presentation"><a href="#panel-mh-vp" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-mh-vp">Màn hình văn phòng</a></li>
+                            <li role="presentation"><a href="#panel-mh-dh" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-mh-dh">Màn hình đồ họa</a></li>
+                        </ul>
+                        <a href="#" class="view-all-link">Xem tất cả »</a>
+                    </nav>
+                    <div class="tab-content-container">
+                        <div id="panel-mh-km" role="tabpanel" class="tab-content-panel active-panel">
+                            <div class="product-grid"> <p>Sản phẩm màn hình KM...</p> </div>
+                        </div>
+                        <div id="panel-mh-gaming" role="tabpanel" class="tab-content-panel">
+                            <div class="product-grid"> <p>Sản phẩm màn hình Gaming...</p> </div>
+                        </div>
+                        <div id="panel-mh-vp" role="tabpanel" class="tab-content-panel">
+                            <div class="product-grid"> <p>Sản phẩm màn hình Văn phòng...</p> </div>
+                        </div>
+                         <div id="panel-mh-dh" role="tabpanel" class="tab-content-panel">
+                            <div class="product-grid"> <p>Sản phẩm màn hình Đồ họa...</p> </div>
+                        </div>
+                    </div>
+                </section>
+
+                 
+                <section class="tabbed-products component-section">
+                     <nav class="tab-nav">
+                        <ul role="tablist">
+                            <li role="presentation"><a href="#panel-vga" role="tab" aria-selected="true" class="tab-link active-tab" data-tab-target="#panel-vga">VGA</a></li>
+                            <li role="presentation"><a href="#panel-cpu" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-cpu">CPU</a></li>
+                            <li role="presentation"><a href="#panel-mainboard" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-mainboard">Mainboard</a></li>
+                            <li role="presentation"><a href="#panel-ram" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-ram">RAM</a></li>
+                             <li role="presentation"><a href="#panel-ssd" role="tab" aria-selected="false" class="tab-link" data-tab-target="#panel-ssd">SSD</a></li>
+                        </ul>
+                        <a href="#" class="view-all-link">Xem tất cả »</a>
+                    </nav>
+                    <div class="tab-content-container">
+                         <div id="panel-vga" role="tabpanel" class="tab-content-panel active-panel">
+                            <div class="product-grid"> <p>Sản phẩm VGA...</p> </div>
+                        </div>
+                         <div id="panel-cpu" role="tabpanel" class="tab-content-panel">
+                            <div class="product-grid"> <p>Sản phẩm CPU...</p> </div>
+                        </div>
+                         <div id="panel-mainboard" role="tabpanel" class="tab-content-panel">
+                            <div class="product-grid"> <p>Sản phẩm Mainboard...</p> </div>
+                        </div>
+                         <div id="panel-ram" role="tabpanel" class="tab-content-panel">
+                            <div class="product-grid"> <p>Sản phẩm RAM...</p> </div>
+                        </div>
+                        <div id="panel-ssd" role="tabpanel" class="tab-content-panel">
+                            <div class="product-grid"> <p>Sản phẩm SSD...</p> </div>
+                        </div>
+                    </div>
+                </section>
+                 
+
+            </div> 
+
+        </div> 
+    </main>
+    
+
+    <!-- === FOOTER === -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col"><h4>Giới thiệu TNS</h4><ul><li><a href="#">Về chúng tôi</a></li><li><a href="#">Tuyển dụng</a></li><li><a href="#">Điều khoản</a></li><li><a href="#">Bảo mật</a></li><li><a href="#">Liên hệ</a></li></ul></div>
+                <div class="footer-col"><h4>Chính sách chung</h4><ul><li><a href="#">Bảo mật</a></li><li><a href="#">Giao nhận</a></li><li><a href="#">Trả góp</a></li><li><a href="#">Thanh toán</a></li><li><a href="#">Khiếu nại</a></li><li><a href="#">Bảo vệ TTCN</a></li><li><a href="#">Đổi - trả hàng</a></li></ul></div>
+                <div class="footer-col"><h4>Hỗ trợ khách hàng</h4><ul><li><a href="#">Hotline CSKH</a></li><li><a href="#">Lắp đặt net</a></li><li><a href="#">Thiết bị Mining</a></li><li><a href="#">Tra cứu BH</a></li><li><a href="#">Câu hỏi</a></li></ul></div>
+                <div class="footer-col"><h4>Kết nối</h4><ul><li><a href="#">Facebook</a></li><li><a href="#">Youtube</a></li><li><a href="#">Zalo</a></li><li><a href="#">Tiktok</a></li></ul><p style="margin-top: 15px;"><strong>Hotline:</strong> 1900 1155</p><p><strong>Email:</strong> pcshopNasa@gmail.com</p></div>
+            </div>
+            <div class="footer-bottom"><p>© 2024 Cửa hàng PC Đơn Giản.</p><p>Tập đoàn Nasa | MST: 0123456789 | Đ/c: Khu CNC, Q.9, TP.HCM</p></div>
+        </div>
+    </footer>
+  
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
