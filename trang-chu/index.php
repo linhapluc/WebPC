@@ -52,7 +52,7 @@ include 'includes/main_navigation.php';
                 <li><a href="category.php?id_loai=LSP012"><i class="fa-solid fa-microchip fa-fw"></i> Mainboard</a></li>
                 <li><a href="category.php?id_loai=LSP013"><i class="fa-solid fa-memory fa-fw"></i> RAM</a></li>
                 <li><a href="category.php?id_loai=LSP014"><i class="fa-solid fa-hdd fa-fw"></i> SSD</a></li>
-
+                <li><a href="category.php?id_loai=LSP015"><i class="fa-solid fa-bolt fa-fw"></i> PSU (Nguồn)</a></li>
             </ul>
         </aside>
 
@@ -276,6 +276,7 @@ include 'includes/main_navigation.php';
                         <li><a href="#panel-mainboard" class="tab-link" data-tab-target="#panel-mainboard" data-id="LSP012" data-name="Mainboard">Mainboard</a></li>
                         <li><a href="#panel-ram" class="tab-link" data-tab-target="#panel-ram" data-id="LSP013" data-name="RAM">RAM</a></li>
                         <li><a href="#panel-ssd" class="tab-link" data-tab-target="#panel-ssd" data-id="LSP014" data-name="SSD">SSD</a></li>
+                        <li><a href="#panel-psu" class="tab-link" data-tab-target="#panel-psu" data-id="LSP015" data-name="PSU">PSU</a></li>
                     </ul>
                     <a href="category.php?id_loai=LSP010" class="view-all-link">Xem tất cả VGA »</a>
                 </nav>
@@ -303,6 +304,12 @@ include 'includes/main_navigation.php';
                     <div id="panel-ssd" role="tabpanel" class="tab-content-panel">
                         <div class="product-grid">
                             <?php display_products($conn, 'LSP014', 4, "Chưa có sản phẩm SSD."); ?>
+                        </div>
+                    </div>
+                    <!-- Dưới Panel SSD -->
+                    <div id="panel-psu" role="tabpanel" class="tab-content-panel">
+                        <div class="product-grid">
+                            <?php display_products($conn, 'LSP015', 4, "Chưa có sản phẩm PSU (Nguồn)."); ?>
                         </div>
                     </div>
                 </div>
